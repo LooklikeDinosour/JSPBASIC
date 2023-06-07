@@ -1,10 +1,14 @@
-<%@page import="java.util.Date"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
-	String name = (String)request.getAttribute("name"); //키
-	Date date = (Date)request.getAttribute("date");
+	//세션에 저장
+	session.setAttribute("name", "홍길동1");
+	session.setAttribute("id", "xxx123");
+	
+	//app에 저장
+	application.setAttribute("count", 1);	
 %>    
+    
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,8 +16,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h3>결과페이지</h3>
-	<%=name %><br>
-	<%=date %>
+
+	<a href="el_session_ok.jsp">가즈아</a>
+
 </body>
 </html>
